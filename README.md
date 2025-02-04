@@ -13,9 +13,9 @@ This is a simple note-taking application built using React, Node.js, and MongoDB
 
 ### Screenshots
 
-![Screenshot 1](https://github.com/siva-anand/quick-notes/assets/10018726/f8f1f0e8-a7b0-4f3b-b8b1-e9f2f4e1b3e0)
-![Screenshot 2](https://github.com/siva-anand/quick-notes/assets/10018726/b7f8f1b8-f7b1-4b0a-b9f0-c7e1f3f2f4f0)
-![Screenshot 3](https://github.com/siva-anand/quick-notes/assets/10018726/f8f1f0e8-a7b0-4f3b-b8b1-e9f2f4e1b3e0)
+![Screenshot 1](https://github.com/sivavj/quick-notes/demo/demo1.png)
+![Screenshot 2](https://github.com/sivavj/quick-notes/demo/demo2.png)
+![Screenshot 3](https://github.com/sivavj/quick-notes/demo/demo3.png)
 
 ### Technologies Used
 
