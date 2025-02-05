@@ -15,10 +15,11 @@ const useNotes = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchNotes = async () => {
+  const fetchNotes = async (search?: string) => {
     try {
       setLoading(true);
-      const response = await axios.get(API_URL);
+      const url = search ? `${API_URL}?search=${encodeURIComponent(search)}` : API_URL;
+      const response = await axios.get(url);
       setNotes(response.data);
       setLoading(false);
     } catch (err) {
@@ -58,7 +59,7 @@ const useNotes = () => {
     fetchNotes();
   }, []);
 
-  return { notes, loading, error, createNote, updateNote, deleteNote };
+  return { notes, loading, error, fetchNotes, createNote, updateNote, deleteNote };
 };
 
 export default useNotes;

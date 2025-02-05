@@ -1,10 +1,22 @@
 import { Request, Response } from "express";
 import Note from "../models/Note";
 
-// Get all notes
+// Get all notes with optional search
 export const getNotes = async (req: Request, res: Response) => {
   try {
-    const notes = await Note.find();
+    const { search } = req.query;
+
+    // Define a filter object
+    const filter = search
+      ? {
+          $or: [
+            { title: { $regex: search, $options: "i" } }, // Case-insensitive search for title
+            { content: { $regex: search, $options: "i" } }, // Case-insensitive search for content
+          ],
+        }
+      : {};
+
+    const notes = await Note.find(filter);
     res.json(notes);
   } catch (error) {
     res.status(500).json({ message: "Failed to fetch notes", error });
