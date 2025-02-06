@@ -9,7 +9,6 @@ This is a simple note-taking application built using React, Node.js, and MongoDB
 - Create, edit, and delete notes
 - Search for notes by title or content
 - Responsive design
-- Dark mode
 
 ### Screenshots
 
