@@ -39,7 +39,7 @@ export const Note = ({ note, onEdit, onDelete }: NoteProps) => {
         <h2 className="font-bold text-xl">{note.title}</h2>
         <p className="text-gray-700 flex flex-wrap w-3/4">{note.content}</p>
       </div>
-      <div className="mt-2 w-1/4 flex justify-end">
+      <div className="mt-2 w-1/4 flex md:justify-end">
         <button
           onClick={handleEdit}
           className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
