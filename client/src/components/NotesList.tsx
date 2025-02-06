@@ -27,9 +27,18 @@ const NotesList: React.FC<NotesListProps> = ({
 
   return (
     <div className="grid gap-4">
-      {notes.map((note) => (
-        <Note key={note._id} note={note} onEdit={onEdit} onDelete={onDelete} />
-      ))}
+      {notes?.length ? (
+        notes.map((note) => (
+          <Note
+            key={note._id}
+            note={note}
+            onEdit={onEdit}
+            onDelete={onDelete}
+          />
+        ))
+      ) : (
+        <p className="text-gray-500">No notes found.</p>
+      )}
     </div>
   );
 };

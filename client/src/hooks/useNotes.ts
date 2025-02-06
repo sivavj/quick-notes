@@ -8,7 +8,8 @@ interface Note {
   content: string;
 }
 
-const API_URL = "http://localhost:5000/api/notes"; // Update with the correct URL
+
+const API_URL = `${import.meta.env.VITE_API_URL!}/notes`;
 
 const useNotes = () => {
   const [notes, setNotes] = useState<Note[]>([]);
